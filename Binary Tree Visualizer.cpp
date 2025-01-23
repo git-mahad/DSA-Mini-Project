@@ -1,9 +1,7 @@
-```cpp
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
-
 // Node structure for Binary Tree
 struct Node {
     int data;
@@ -239,4 +237,3 @@ int main() {
 
     return 0;
 }
-```
