@@ -2,14 +2,13 @@
 #include <vector>
 #include <string>
 using namespace std;
-// Node structure for Binary Tree
+
 struct Node {
     int data;
     Node* left;
     Node* right;
 };
 
-// Binary Tree class
 class BinaryTree {
 public:
     Node* root;
