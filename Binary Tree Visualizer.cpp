@@ -31,7 +31,6 @@ public:
         }
     }
 
-    // Function to insert node recursively
     void insertNode(Node* currentNode, Node* newNode) {
         if (newNode->data < currentNode->data) {
             if (currentNode->left == nullptr) {
