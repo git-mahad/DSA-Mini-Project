@@ -17,7 +17,6 @@ public:
         root = nullptr;
     }
 
-    // Function to insert node in binary tree
     void insert(int data) {
         Node* newNode = new Node();
         newNode->data = data;
