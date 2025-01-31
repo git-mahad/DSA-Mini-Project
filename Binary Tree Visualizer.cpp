@@ -1,17 +1,14 @@
-```cpp
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
 
-// Node structure for Binary Tree
 struct Node {
     int data;
     Node* left;
     Node* right;
 };
 
-// Binary Tree class
 class BinaryTree {
 public:
     Node* root;
@@ -20,7 +17,6 @@ public:
         root = nullptr;
     }
 
-    // Function to insert node in binary tree
     void insert(int data) {
         Node* newNode = new Node();
         newNode->data = data;
@@ -35,7 +31,6 @@ public:
         }
     }
 
-    // Function to insert node recursively
     void insertNode(Node* currentNode, Node* newNode) {
         if (newNode->data < currentNode->data) {
             if (currentNode->left == nullptr) {
@@ -239,4 +234,3 @@ int main() {
 
     return 0;
 }
-```
