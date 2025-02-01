@@ -94,7 +94,6 @@ public:
         return currentNode;
     }
 
-    // Function to find minimum node in binary tree
     Node* findMinNode(Node* currentNode) {
         while (currentNode->left != nullptr) {
             currentNode = currentNode->left;
