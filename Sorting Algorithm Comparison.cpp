@@ -7,7 +7,6 @@
 
 using namespace std;
 
-// Function to generate random dataset
 vector<int> generateRandomDataset(int size) {
     vector<int> dataset(size);
     random_device rd;
@@ -37,7 +36,6 @@ vector<int> generateReverseSortedDataset(int size) {
     return dataset;
 }
 
-// Bubble Sort implementation
 void bubbleSort(vector<int>& dataset) {
     int n = dataset.size();
     for (int i = 0; i < n - 1; ++i) {
