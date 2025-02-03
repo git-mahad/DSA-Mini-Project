@@ -18,7 +18,6 @@ vector<int> generateRandomDataset(int size) {
     return dataset;
 }
 
-// Function to generate sorted dataset
 vector<int> generateSortedDataset(int size) {
     vector<int> dataset(size);
     for (int i = 0; i < size; ++i) {
@@ -27,7 +26,6 @@ vector<int> generateSortedDataset(int size) {
     return dataset;
 }
 
-// Function to generate reverse sorted dataset
 vector<int> generateReverseSortedDataset(int size) {
     vector<int> dataset(size);
     for (int i = 0; i < size; ++i) {
@@ -47,7 +45,6 @@ void bubbleSort(vector<int>& dataset) {
     }
 }
 
-// Merge Sort implementation
 void merge(vector<int>& dataset, int left, int mid, int right) {
     vector<int> leftArr(mid - left + 1);
     vector<int> rightArr(right - mid);
@@ -93,7 +90,6 @@ void mergeSort(vector<int>& dataset) {
     mergeSortHelper(dataset, 0, dataset.size() - 1);
 }
 
-// Quick Sort implementation
 int partition(vector<int>& dataset, int low, int high) {
     int pivot = dataset[high];
     int i = low - 1;
@@ -119,7 +115,6 @@ void quickSort(vector<int>& dataset) {
     quickSortHelper(dataset, 0, dataset.size() - 1);
 }
 
-// Function to measure execution time
 double measureExecutionTime(void (*func)(vector<int>&), const vector<int>& dataset) {
     auto start = chrono::high_resolution_clock::now();
     vector<int> datasetCopy = dataset;
@@ -145,7 +140,6 @@ int main() {
         vector<int> sortedDataset = generateSortedDataset(size);
         vector<int> reverseSortedDataset = generateReverseSortedDataset(size);
 
-        // Measure execution time for each algorithm
         for (int algorithmIndex = 0; algorithmIndex < numAlgorithms; ++algorithmIndex) {
             double randomTime = measureExecutionTime(algorithms[algorithmIndex], randomDataset);
             double sortedTime = measureExecutionTime(algorithms[algorithmIndex], sortedDataset);
