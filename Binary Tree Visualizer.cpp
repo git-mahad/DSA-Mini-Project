@@ -55,7 +55,6 @@ public:
         root = deleteNodeRecursive(root, data);
     }
 
-    // Function to delete node recursively
     Node* deleteNodeRecursive(Node* currentNode, int data) {
         if (currentNode == nullptr) {
             return currentNode;
